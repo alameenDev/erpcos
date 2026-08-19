@@ -33,11 +33,11 @@ Create a second Node.js application from the same GitHub repository and set:
 - Package manager: npm
 - Install command: `npm install --omit=dev`
 - Start command: `npm start`
-- Entry file, when requested: `server.js`
+- Entry file, when requested: `server.cjs`
 - Health check path: `/health`
 
-Do not configure `server.js` while the application root points to the repository
-root. The Express entry file exists at `mysql-backend/server.js`.
+Do not configure `server.cjs` while the application root points to the repository
+root. The Express entry file exists at `mysql-backend/server.cjs`.
 
 ## Required environment variables
 
