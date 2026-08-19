@@ -2,7 +2,7 @@
   "name": "cosmeticore-mysql-api",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node server.js",
