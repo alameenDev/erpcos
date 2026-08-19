@@ -1,27 +1,43 @@
 # Hostinger deployment
 
-The repository contains two applications:
+The repository contains two independently deployable applications:
 
-- The current dashboard frontend in the repository root.
+- A standard Next.js dashboard frontend in the repository root.
 - The production MySQL API in `mysql-backend`.
 
 ## Recommended hPanel configuration
 
+### Deployment 1: dashboard frontend
+
 Create a Node.js application from the GitHub repository and set:
+
+- Branch: `main`
+- Application root: repository root
+- Framework: `Next.js`
+- Node.js version: 20 or 22
+- Build command: `npm run build`
+- Start command: `npm start`
+- Entry file: leave empty
+- Output directory: leave empty
+
+Set `NEXT_PUBLIC_API_URL` to the public URL of Deployment 2.
+
+### Deployment 2: MySQL API
+
+Create a second Node.js application from the same GitHub repository and set:
 
 - Branch: `main`
 - Application root: `mysql-backend`
 - Node.js version: 20 or 22
+- Framework: `Express`
 - Package manager: npm
 - Install command: `npm install --omit=dev`
 - Start command: `npm start`
 - Entry file, when requested: `src/server.js`
 - Health check path: `/health`
 
-Using the repository root as the application root installs the separate
-Vinext frontend and its 500+ packages. That is not an API deployment error,
-but it is unnecessary for the MySQL service and can show deprecation warnings
-from transitive frontend build dependencies.
+Do not configure `server.js` while the application root points to the repository
+root. The Express entry file exists at `mysql-backend/src/server.js` only.
 
 ## Required environment variables
 

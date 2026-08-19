@@ -1,4 +1,34 @@
-# vinext-starter
+# CosmetiCore ERP
+
+Arabic cosmetics inventory, sales, installment and accounting system.
+
+## Deployment architecture
+
+- Repository root: Next.js dashboard frontend.
+- `mysql-backend`: Express and MySQL API.
+
+See `HOSTINGER_DEPLOYMENT.md` for the exact two-application Hostinger setup.
+
+## Frontend commands
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+## API commands
+
+```bash
+cd mysql-backend
+npm install --omit=dev
+npm run db:init
+npm start
+```
+
+---
+
+## Original Sites development notes
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
