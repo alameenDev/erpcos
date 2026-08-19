@@ -9,7 +9,7 @@ Production-oriented Node.js API for the cosmetics accounting, inventory, sales, 
 3. Set `DB_HOST` to the host supplied by Hostinger. Do not assume `localhost`; on managed Node hosting it may resolve to IPv6 `::1` and cause an access-denied error.
 4. Run `npm install`.
 5. Run `npm run db:init` once to create the schema and initial administrator.
-6. Start the application with `npm start` and configure Hostinger's application entry point as `src/server.js`.
+6. Start the application with `npm start` and configure Hostinger's application entry point as `server.js`.
 
 ## Required environment variables
 

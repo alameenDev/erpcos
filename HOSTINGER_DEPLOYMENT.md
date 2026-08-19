@@ -14,7 +14,7 @@ Create a Node.js application from the GitHub repository and set:
 - Branch: `main`
 - Application root: repository root
 - Framework: `Next.js`
-- Node.js version: 20 or 22
+- Node.js version: 22
 - Build command: `npm run build`
 - Start command: `npm start`
 - Entry file: leave empty
@@ -33,11 +33,11 @@ Create a second Node.js application from the same GitHub repository and set:
 - Package manager: npm
 - Install command: `npm install --omit=dev`
 - Start command: `npm start`
-- Entry file, when requested: `src/server.js`
+- Entry file, when requested: `server.js`
 - Health check path: `/health`
 
 Do not configure `server.js` while the application root points to the repository
-root. The Express entry file exists at `mysql-backend/src/server.js` only.
+root. The Express entry file exists at `mysql-backend/server.js`.
 
 ## Required environment variables
 
